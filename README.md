@@ -25,6 +25,14 @@ This project is a companion to a presentation for the Australian Computer Societ
 * To run a specific feature: cucumber features/tax_calculator_individuals/full_year_residents.feature
 * To run a specific scenario within a feature: cucumber features/tax_calculator_individuals/full_year_residents.feature:24
 
+## Debugging
+
+* The @javascript tag makes the test run in a browser so you can see what's happening. Remove it to run headless.
+* This project includes debugging helpers: 
+  * Add the step 'And I debug' to open the pry console from a feature
+  * Add the method 'debug' to open the pry console from a step
+  * 
+
 ## References
 
 * [Cucumber](http://cukes.info)

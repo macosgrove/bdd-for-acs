@@ -7,6 +7,7 @@ Feature: Calculate individual taxes for full year residents
   Scenario: Tax credits and medicare levy only
     Given I have started the latest comprehensive tax calculator
     Then I should see "Are you a resident for income tax purposes?"
+    And I debug
     And I am a Resident for the full year
     When my income details are:
       | Income type     | amount  |
