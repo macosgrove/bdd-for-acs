@@ -11,5 +11,6 @@ Capybara.register_driver :chrome do |app|
 end
 
 Capybara.javascript_driver = :chrome
+Capybara.save_and_open_page_path = 'tmp/'
 
 World(Capybara)

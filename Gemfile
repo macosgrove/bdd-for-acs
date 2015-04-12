@@ -7,4 +7,5 @@ group(:test) do
   gem 'pry'
   gem 'pry-byebug'
   gem 'selenium-webdriver'
+  gem 'launchy'
 end

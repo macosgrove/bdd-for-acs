@@ -7,20 +7,22 @@ Feature: Calculate individual taxes for full year residents
   Scenario: Tax credits and medicare levy only
     Given I have started the latest comprehensive tax calculator
     Then I should see "Are you a resident for income tax purposes?"
-    And I debug
     And I am a Resident for the full year
     When my income details are:
-      | Income type     | amount  |
-      | taxable income  | 134,200 |
-      | fringe benefits | 5000    |
+      | Income type           | Amount  |
+      | taxable income        | 134,200 |
+      | reportable fringe ben | 5000    |
     And I choose to include the following tax calculation items:
-      | tax credits   |
-      | medicare levy |
+      | Item              |
+      | RefCreditsOffsets |
+      | MedLevy           |
     And my tax credits are:
-      | PAYG installments   | 23000 |
-      | Franking tax offset | 1200  |
+      | Credit type         | Amount |
+      | PAYG installments   | 23000  |
+      | Franking tax offset | 1200   |
     Then my tax estimates are expected to be:
-      | Tax on taxable income | 37601.00 |
-      | Medicare levy         | 2013.00  |
-      | Total tax payable     | 39614.00 |
-      | Net tax payable       | 15414.00 |
+      | Estimate type         | Amount     |
+      | Tax on taxable income | $37,601.00 |
+      | Medicare levy         | $2,013.00  |
+      | Total tax payable     | $39,614.00 |
+      | Net tax payable       | $15,414.00 |
