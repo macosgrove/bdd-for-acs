@@ -1,4 +1,5 @@
 Feature: Calculate individual taxes for full year residents
+
   In order to know how much more tax I have to pay
   As an Australian full year resident
   I want to calculate my net tax owing
@@ -6,7 +7,6 @@ Feature: Calculate individual taxes for full year residents
   @javascript
   Scenario: Tax credits and medicare levy only
     Given I have started the latest comprehensive tax calculator
-    Then I should see "Are you a resident for income tax purposes?"
     And I am a Resident for the full year
     When my income details are:
       | Income type           | Amount  |
@@ -16,10 +16,12 @@ Feature: Calculate individual taxes for full year residents
       | Item              |
       | RefCreditsOffsets |
       | MedLevy           |
+
     And my tax credits are:
       | Credit type         | Amount |
       | PAYG installments   | 23000  |
       | Franking tax offset | 1200   |
+
     Then my tax estimates are expected to be:
       | Estimate type         | Amount     |
       | Tax on taxable income | $37,601.00 |
