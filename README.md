@@ -52,8 +52,8 @@ During the presentation we imagine we are a team tasked with updating the Austra
 ## Other References
 
 * [Cucumber](http://cukes.info), [Cucumber Platforms](https://cukes.info/platforms.html) and [Cucumber Backgrounder](https://github.com/cucumber/cucumber/wiki/Cucumber-Backgrounder)
-* [Ruby]
-* [RSpec]
+* [Ruby](https://www.ruby-lang.org)
+* [RSpec](http://rspec.info/)
 * [Installation on Windows](http://www.spritecloud.com/2011/04/complete-setup-guide-for-ruby-cucumber-and-watir-or-selenium-on-windows/)
 * [Installation on MAC](https://mayxu.wordpress.com/2012/04/17/complete-mac-setup-guide-for-rubycucumberwatirselenium-12/)
 * [Capybara](http://github.com/jnicklas/capybara) (for actions such as click_link, click_button, etc...)
