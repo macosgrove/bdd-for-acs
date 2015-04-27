@@ -36,6 +36,7 @@ During the presentation we imagine we are a team tasked with updating the Austra
 ## Running Unit Tests
 
 * To run all tests: rspec
+* To run all tests and display results as documentation: rspec -f d -c
 * To run a specific test: rspec ./spec/tax_calculator_spec.rb:71
 
 ## Debugging Unit Tests
