@@ -6,7 +6,7 @@ GEM
     byebug (2.7.0)
       columnize (~> 0.3)
       debugger-linecache (~> 1.2)
-    capybara (2.1.0)
+    capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
@@ -30,12 +30,12 @@ GEM
     launchy (2.4.2)
       addressable (~> 2.3)
     method_source (0.8.2)
-    mime-types (2.0)
-    mini_portile (0.5.2)
+    mime-types (2.6.1)
+    mini_portile (0.6.2)
     multi_json (1.8.2)
     multi_test (0.0.2)
-    nokogiri (1.6.0)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -43,9 +43,10 @@ GEM
     pry-byebug (1.3.2)
       byebug (~> 2.7)
       pry (~> 0.9.12)
-    rack (1.5.2)
-    rack-test (0.6.2)
+    rack (1.6.4)
+    rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.3.2)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -74,5 +75,6 @@ DEPENDENCIES
   launchy
   pry
   pry-byebug
+  rake
   rspec
   selenium-webdriver

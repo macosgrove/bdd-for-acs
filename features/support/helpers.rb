@@ -6,8 +6,9 @@ module Helpers
     binding.pry
   end
 
-  def switch_to_new_window
-    page.driver.browser.switch_to.window(page.driver.browser.window_handles.last)
+  def switch_to_linked_window(link)
+    new_window = window_opened_by { click_link(link) }
+    switch_to_window new_window
   end
 
   def submit_form(which)

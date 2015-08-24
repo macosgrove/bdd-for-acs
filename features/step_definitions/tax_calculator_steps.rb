@@ -3,8 +3,7 @@ YES = '596573'
 
 Given(/^I have started the latest comprehensive tax calculator$/) do
   visit('/Calculators-and-tools/Comprehensive-tax-calculator')
-  click_link('Comprehensive tax calculator 2014')
-  switch_to_new_window
+  switch_to_linked_window 'Comprehensive tax calculator 2014'
   submit_form(:last)
 end
 
