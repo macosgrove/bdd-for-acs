@@ -8,6 +8,7 @@ Feature: Calculate individual taxes for full year residents
   Scenario: Tax credits and medicare levy only
     Given I have started the latest comprehensive tax calculator
     And I am a Resident for the full year
+
     When my income details are:
       | Income type           | Amount  |
       | taxable income        | 134,200 |
@@ -16,15 +17,15 @@ Feature: Calculate individual taxes for full year residents
       | Item              |
       | RefCreditsOffsets |
       | MedLevy           |
-
     And my tax credits are:
       | Credit type         | Amount |
       | PAYG installments   | 23000  |
       | Franking tax offset | 1200   |
+    And I have no dependent children
 
     Then my tax estimates are expected to be:
       | Estimate type         | Amount     |
       | Tax on taxable income | $37,601.00 |
-      | Medicare levy         | $2,013.00  |
-      | Total tax payable     | $39,614.00 |
-      | Net tax payable       | $15,414.00 |
+      | Medicare levy         | $2,684.00  |
+      | Total tax payable     | $40,285.00 |
+      | Net tax payable       | $16,085.00 |

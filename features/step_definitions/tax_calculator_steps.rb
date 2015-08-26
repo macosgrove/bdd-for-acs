@@ -1,9 +1,10 @@
 FULL_YEAR_RESIDENT = '5265736964656E74'
+NO_SPOUSE = '4E6F'
 YES = '596573'
 
 Given(/^I have started the latest comprehensive tax calculator$/) do
   visit('/Calculators-and-tools/Comprehensive-tax-calculator')
-  switch_to_linked_window 'Comprehensive tax calculator 2014'
+  switch_to_linked_window 'Comprehensive tax calculator 2015'
   submit_form(:last)
 end
 
@@ -35,11 +36,16 @@ And(/^my tax credits are:$/) do |table|
   submit_form(:last)
 end
 
+And(/^I have no dependent children$/) do
+  choose_by_value(NO_SPOUSE)
+  page.fill_in('XO_4_PHI_dependents', with: '0')
+  submit_form(:last)
+end
+
 Then(/^my tax estimates are expected to be:$/) do |table|
   # table is a table.hashes.keys # => [:Tax on taxable income, :37601.00]
   table.hashes.each do |row|
     expect(table_row_containing(row['Estimate type'])).to have_text(row['Amount'])
   end
 end
-
 
